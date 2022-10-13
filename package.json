@@ -56,14 +56,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fpapado/react-lazy-images.git"
+    "url": "git+https://github.com/gugadev/react-lazy-images.git"
   },
-  "author": "Fotis Papadogeorgopoulos",
+  "author": "Fotis Papadogeorgopoulos (Fork by gugadev)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fpapado/react-lazy-images/issues"
+    "url": "https://github.com/gugadev/react-lazy-images/issues"
   },
-  "homepage": "https://github.com/fpapado/react-lazy-images#readme",
+  "homepage": "https://github.com/gugadev/react-lazy-images#readme",
   "dependencies": {
     "react-intersection-observer": "^6.1.0",
     "unionize": "^2.1.2"
