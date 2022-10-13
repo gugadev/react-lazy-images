@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "es2015",
-    "target": "es5",
+    "target": "es6",
     "declaration": true,
     "sourceMap": true,
     "jsx": "react",
@@ -11,7 +11,10 @@
     "outDir": "ts-build",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
     "lib": ["es6", "dom"],
     "baseUrl": "./",
     "paths": {

@@ -384,7 +384,7 @@ const loadImage = (
           // TODO: consider writing the .decode() definition and sending a PR
           //@ts-ignore
           .decode()
-          .then((image: HTMLImageElement) => resolve(image))
+          .then(() => resolve(image))
           .catch((err: any) => reject(err))
       );
     }
@@ -412,13 +412,12 @@ interface CancelablePromise {
 const makeCancelable = (promise: Promise<any>): CancelablePromise => {
   let hasCanceled_ = false;
 
-  const wrappedPromise = new Promise((resolve, reject) => {
-    promise.then(
-      (val: any) => (hasCanceled_ ? reject({ isCanceled: true }) : resolve(val))
+  const wrappedPromise = new Promise<{}>((resolve, reject) => {
+    promise.then((val: any) =>
+      hasCanceled_ ? reject({ isCanceled: true }) : resolve(val)
     );
-    promise.catch(
-      (error: any) =>
-        hasCanceled_ ? reject({ isCanceled: true }) : reject(error)
+    promise.catch((error: any) =>
+      hasCanceled_ ? reject({ isCanceled: true }) : reject(error)
     );
   });
 
